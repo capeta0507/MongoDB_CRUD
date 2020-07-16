@@ -83,17 +83,26 @@ async function serverStart(){
 ### 執行 POST 資料建檔
 URL：POST http://localhost:5500/db/createone
 Body 寄送
-```jsonld=
+```json=
 {
     "db_name": "Marvel_db",
     "colloction_name": "Todos",
-    "create_data":{
-        "userId": 2,
-        "id": 201,
-        "title": "資料庫維護 Node.js + Express + Mongodb",
-        "completed": false,
-        "user_name": ""
-    }
+    "create_data":[
+        {
+            "userId": 2,
+            "id": 201,
+            "title": "資料庫維護 Node.js + Express + Mongodb",
+            "completed": false,
+            "user_name": ""
+        },
+        {
+            "userId": 2,
+            "id": 202,
+            "title": "MODNGDB 資料庫維護CRUD",
+            "completed": false,
+            "user_name": "XXX"
+        }
+    ]
 }
 ```
 #### 結果

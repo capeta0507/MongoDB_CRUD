@@ -198,7 +198,7 @@ async function createone(req,res){
     dbo = await client.db(databaseName);                // 指向 Database
     collectObj = await dbo.collection(collecionName);   // 指向 Collection
     var myobj = req.body.create_data;
-    let result = await collectObj.insertOne(myobj);
+    let result = await collectObj.insertMany(myobj);
     return res.json ({
       success:true,
       status:"Ok",
